@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	<head>
+		<meta charset="utf-8" />
+       
+		<title>Carrinho de Compras</title>
+        
+		<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+        
+	
+		<link rel="stylesheet" type="text/css" href="_css/style.css">
+
+	</head>
+
+	<body>
+		<script src="CarrinhoCompras.js" ></script>
+		<script src="AdicionarQuantidade.js"></script> 
+		<script src="RemoverQuantidade.js"></script> 
+		
+		<div class="container">
+
+			<div class="cart-container">
+
+				<header>
+                    <div>
+						<input type="text"  id="compra" class="carrinho" value="3"  readonly>  
+						<p class="label"> Carrinho de Compras</p>	           
+					</div>
+					
+					<h3></h3>
+				   
+				</header>
+
+				<div class="cart-body">
+
+					<div class="cart-item">
+
+						<div class="cart-row">
+
+							<div class="cart-row-cell pic1">
+
+								<a href="#" id="RemoverProduto1" onClick="RemoverProduto1()">-</a>
+								
+								<span></span>
+							
+							</div>
+
+							<div class="cart-row-cell desc">
+								
+								<h5>Gabinete Gamer</h5>
+								<p>R$ 5.000</p>
+								<p>Em estoque <input type="text"  id="estoque1" class="estoque"  maxlength="3" value="10" >
+
+							</div>
+
+							<div class="cart-row-cell quant">
+
+								<ul>
+                                    <li> <input class = "submit" type=button value="-" id="removerproduto1" onClick="removerquantidadeproduto('qtdproduto1')"></li>
+									<input type="text"  id="qtdproduto1" class="quantidade"  maxlength="3" value="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                    <li> <input class = "submit" type=button value="+" id="adicionarproduto1" onClick="adicionarquantidadeproduto('qtdproduto1')"></li>
+								</ul>
+
+							</div>
+
+							<div class="cart-row-cell amount">
+
+								<p><input type="text"  id="vlrproduto1" class="valor" value="5000"  readonly></p> 
+
+							</div>	
+						
+						</div>
+
+						<div class="cart-row">
+
+							<div class="cart-row-cell pic2">
+
+								<a href="#" id="RemoverProduto2" onClick="RemoverProduto2()">-</a>
+								
+								<span></span>
+							
+							</div>
+
+							<div class="cart-row-cell desc">
+								
+								<h5>Noteebok Dell</h5>
+
+								<p>R$ 4.500</p>
+								<p>Em estoque <input type="text"  id="estoque1" class="estoque"  maxlength="3" value="12" >
+
+							</div>
+
+							<div class="cart-row-cell quant">
+
+								<ul>
+                                    <li> <input class = "submit" type=button value="-" id="removerproduto2" onClick="removerquantidadeproduto('qtdproduto2')"></li>
+									<input type="text"  id="qtdproduto2" class="quantidade"  maxlength="3" value="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+                                    <li> <input class = "submit" type=button value="+"  onClick="adicionarquantidadeproduto('qtdproduto2')"></li>
+								</ul>
+				
+
+							</div>
+
+							<div class="cart-row-cell amount">
+
+								<p><input type="text"  id="vlrproduto2" class="valor" value="4500"  readonly></p> 
+
+							</div>	
+						
+						</div>
+
+						<div class="cart-row">
+
+							<div class="cart-row-cell pic3">
+
+								<a href="#" id="RemoverProduto3" onClick="RemoverProduto3()">-</a>
+								
+								<span></span>
+							
+							</div>
+
+							<div class="cart-row-cell desc">
+								
+								<h5>Fone de Ouvido</h5>
+
+								<p>R$ 1.300</p>
+								<p>Em estoque <input type="text"  id="estoque1" class="estoque"  maxlength="3" value="30" >
+
+							</div>
+
+							<div class="cart-row-cell quant">
+
+								<ul>
+							    	<li> <input class = "submit" type=button value="-" id="removerproduto3" onClick="removerquantidadeproduto('qtdproduto3')"></li>
+									<input type="text"  id="qtdproduto3" class="quantidade" maxlength="3" value="1" onkeypress="return event.charCode >= 48 && event.charCode <= 57">
+									<li> <input class = "submit" type=button value="+" id="adicionarproduto3" onClick="adicionarquantidadeproduto('qtdproduto3')"></li>
+								</ul>
+
+
+							</div>
+
+							<div class="cart-row-cell amount">
+
+								<p><input type="text"  id="vlrproduto3" class="valor" value="1300"  readonly></p> 
+
+							</div>	
+						
+						</div>
+
+
+
+					</div>
+				
+				</div>
+
+				<footer>
+
+
+					<div class="totals">
+						
+						<p class="total-label">Subtotal</p>
+
+						<input type="text"  id="subtotal" class="total"  value="10800" readonly>
+
+					</div>
+
+					<div class="totals">
+						
+						<p class="total-label">Taxa</p>
+
+						<input type="text"  id="frete" class="total"  value="12" readonly>
+
+					</div>
+
+
+					<div class="totals">
+						
+						<p class="total-label">Total</p>
+
+						<input type="text"  id="total" class="total"  value="10813" readonly>
+
+					</div>
+				
+					<div> <p> <button>Finalizar Compra</button> </li>  </p>
+			   
+
+				</footer>
+
+			</div>
+
+		</div>
+
+	</body>
+
+</html>
